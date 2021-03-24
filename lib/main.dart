@@ -1,6 +1,5 @@
 import 'package:chat_app/screens/chat_screen.dart';
 import 'package:chat_app/screens/splash_screen.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -19,9 +18,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        canvasColor: Colors.white,
+        canvasColor: Colors.black87,
         primarySwatch: Colors.blue,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blue,
         accentColor: Colors.deepPurple,
         accentColorBrightness: Brightness.dark,
         buttonTheme: ButtonTheme.of(context).copyWith(

@@ -9,25 +9,28 @@ class NewMessages extends StatefulWidget {
 
 class _NewMessagesState extends State<NewMessages> {
   final _controller = TextEditingController();
-  String _enteredMessage ="";
+  String _enteredMessage = "";
 
-
-  _sendMessage()async{
+  _sendMessage() async {
     FocusScope.of(context).unfocus();
     final user = FirebaseAuth.instance.currentUser;
-    final userData = await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
+    final userData = await FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.uid)
+        .get();
     FirebaseFirestore.instance.collection('chat').add({
       'text': _enteredMessage,
       'createdAt': Timestamp.now(),
-      'username':userData['username'],
+      'username': userData['username'],
       'userId': user.uid,
-      'userImage':userData['image_url'],
-        });
+      'userImage': userData['image_url'],
+    });
     _controller.clear();
     setState(() {
       _enteredMessage="";
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -47,15 +50,14 @@ class _NewMessagesState extends State<NewMessages> {
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Theme.of(context).primaryColor),
                 ),
-                hintText: "Send a message...",
-                hintStyle: TextStyle(color: Theme.of(context).primaryColor)
+                hintText: 'Send a message...',
+                hintStyle: TextStyle(color: Theme.of(context).primaryColor),
               ),
-              onChanged: (val){
+              onChanged: (val) {
                 setState(() {
                   _enteredMessage = val;
                 });
               },
-
             ),
           ),
           IconButton(
@@ -65,9 +67,7 @@ class _NewMessagesState extends State<NewMessages> {
             onPressed: _enteredMessage.trim().isEmpty ? null : _sendMessage,
           ),
         ],
-
       ),
-
     );
   }
 }
