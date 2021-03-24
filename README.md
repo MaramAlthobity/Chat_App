@@ -1,16 +1,18 @@
 # chat_app
 
-A new Flutter project.
+This app created using flutter and firebase
 
-## Getting Started
+## It contains 2 screen 
 
-This project is a starting point for a Flutter application.
+1. Authentication screen
+a. Login
 
-A few resources to get you started if this is your first Flutter project:
+![auth](https://user-images.githubusercontent.com/56017399/112260565-356af480-8c7b-11eb-9001-d6b78623b98c.jpg)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+b. SignUp
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![SignUp](https://user-images.githubusercontent.com/56017399/112260998-030dc700-8c7c-11eb-869a-4495a4f3a21a.jpg)
+
+3. Chat screen
+
+![chat](https://user-images.githubusercontent.com/56017399/112392086-eb7d1f80-8d09-11eb-8684-d3bb32a88c9a.jpg)

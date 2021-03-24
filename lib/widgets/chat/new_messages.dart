@@ -40,7 +40,7 @@ class _NewMessagesState extends State<NewMessages> {
         children: [
           Expanded(
             child: TextField(
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
               cursorColor: Theme.of(context).primaryColor,
               autocorrect: true,
               enableSuggestions: true,
@@ -62,7 +62,7 @@ class _NewMessagesState extends State<NewMessages> {
           ),
           IconButton(
             color: Theme.of(context).primaryColor,
-            disabledColor: Colors.white,
+            disabledColor: Colors.black,
             icon: Icon(Icons.send),
             onPressed: _enteredMessage.trim().isEmpty ? null : _sendMessage,
           ),

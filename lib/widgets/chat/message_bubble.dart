@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class MessageBubble extends StatelessWidget {
   MessageBubble(this.message, this.userName, this.userImage, this.isMe,
       {this.key});
@@ -21,7 +20,7 @@ class MessageBubble extends StatelessWidget {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                color: !isMe ? Colors.grey[300] : Theme.of(context).accentColor,
+                color: !isMe ? Colors.grey[400] : Theme.of(context).accentColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(14),
                   topRight: Radius.circular(14),
